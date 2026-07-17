@@ -1,6 +1,10 @@
 # CodeConnect
 
-**[View the live CodeConnect application](https://code-connect-eight-theta.vercel.app/opportunities)**
+## 🚀 Live Demo
+
+🔗 **Live Application:** [https://your-project-name.vercel.app](https://code-connect-eight-theta.vercel.app/opportunities)
+
+Explore CodeConnect, a modern Angular platform for discovering and registering for developer workshops, hackathons, conferences, and networking events.
 
 CodeConnect is a developer-focused learning and networking platform for discovering workshops, hackathons, conferences, mentorship sessions, career events, bootcamps, and open-source meetups. It pairs a polished standalone Angular frontend with JSON Server for local development and a deployment-safe browser data adapter on Vercel.
 
@@ -101,15 +105,6 @@ The repository includes `vercel.json` with the Angular output directory and SPA 
 
 JSON Server is used only during local development. A Vercel deployment loads the bundled `db.json` seed data instead, while newly created and cancelled registrations are saved in the visitor's browser through `localStorage`. This keeps the demo fully functional without trying to connect to `localhost:3000` from production. For shared, multi-user persistence, replace this browser-backed deployment adapter with a hosted database/API later.
 
-## Screenshots
-
-> Add screenshots here after deployment.
-
-- Opportunities desktop view — `docs/screenshots/opportunities-desktop.png`
-- Opportunity details — `docs/screenshots/opportunity-details.png`
-- Registration wizard — `docs/screenshots/registration-wizard.png`
-- My Registrations mobile view — `docs/screenshots/registrations-mobile.png`
-- Dark theme — `docs/screenshots/dark-theme.png`
 
 ## Future improvements
 
