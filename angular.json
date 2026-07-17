@@ -28,6 +28,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "db.json",
+                "input": ".",
+                "output": "/"
               }
             ],
             "styles": [

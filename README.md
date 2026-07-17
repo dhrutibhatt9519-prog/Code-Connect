@@ -1,6 +1,8 @@
 # CodeConnect
 
-CodeConnect is a developer-focused learning and networking platform for discovering workshops, hackathons, conferences, mentorship sessions, career events, bootcamps, and open-source meetups. It pairs a polished standalone Angular frontend with a lightweight JSON Server API.
+**[View the live CodeConnect application](https://code-connect-eight-theta.vercel.app/opportunities)**
+
+CodeConnect is a developer-focused learning and networking platform for discovering workshops, hackathons, conferences, mentorship sessions, career events, bootcamps, and open-source meetups. It pairs a polished standalone Angular frontend with JSON Server for local development and a deployment-safe browser data adapter on Vercel.
 
 ## Features
 
@@ -9,7 +11,7 @@ CodeConnect is a developer-focused learning and networking platform for discover
 - Detailed opportunity pages with agenda, prerequisites, speakers, packages, availability, and FAQ
 - Persistent favorites and light/dark theme preferences using `localStorage`
 - Three-step registration wizard with package capacity, ticket quantity, participant `FormArray`, live totals, review, and confirmation
-- JSON Server registration creation with unique `CC-2026-XXXXXX` references
+- Registration creation with unique `CC-2026-XXXXXX` references
 - My Registrations dashboard with status filters and confirmation-based PATCH cancellation
 - Loading, empty, error, invalid-route, submission, success, and cancellation states
 - Responsive header/mobile navigation, accessible controls, keyboard focus states, and wildcard 404 page
@@ -27,8 +29,8 @@ CodeConnect is a developer-focused learning and networking platform for discover
 Requirements: Node.js 22 or newer and npm.
 
 ```bash
-git clone <repository-url>
-cd code-connect
+git clone https://github.com/dhrutibhatt9519-prog/Code-Connect.git
+cd Code-Connect
 npm install
 ```
 
@@ -63,25 +65,25 @@ The generated Angular workspace does not include an ESLint builder, so there is 
 
 ```text
 src/app/
-├── core/
-│   ├── constants/          # API and sample-user constants
-│   ├── models/             # Opportunity and registration contracts
-│   └── services/           # HTTP, favorites, and theme services
-├── features/
-│   ├── opportunities/      # Listing, cards, and details
-│   ├── registration/       # Wizard and its four focused steps/states
-│   ├── registrations/      # My Registrations dashboard
-│   ├── favorites/          # Saved opportunity view
-│   └── not-found/          # Wildcard route
-├── layout/                 # Header and footer
-├── shared/components/      # Loading, empty, and confirmation UI
-├── app.config.ts
-└── app.routes.ts
+|-- core/
+|   |-- constants/          # API and sample-user constants
+|   |-- models/             # Opportunity and registration contracts
+|   `-- services/           # HTTP, favorites, and theme services
+|-- features/
+|   |-- opportunities/      # Listing, cards, and details
+|   |-- registration/       # Wizard and its focused steps/states
+|   |-- registrations/      # My Registrations dashboard
+|   |-- favorites/          # Saved opportunity view
+|   `-- not-found/          # Wildcard route
+|-- layout/                 # Header and footer
+|-- shared/components/      # Loading, empty, and confirmation UI
+|-- app.config.ts
+`-- app.routes.ts
 ```
 
 ## API endpoints
 
-The sample data lives in `db.json`.
+The sample data lives in `db.json`. These REST endpoints are provided by JSON Server during local development:
 
 | Method | Endpoint | Purpose |
 | --- | --- | --- |
@@ -90,6 +92,14 @@ The sample data lives in `db.json`.
 | GET | `/registrations?userId=user1` | Fetch the sample user's registrations |
 | POST | `/registrations` | Create a registration |
 | PATCH | `/registrations/:id` | Update registration status |
+
+## Deploying to Vercel
+
+Live deployment: **[https://code-connect-eight-theta.vercel.app/opportunities](https://code-connect-eight-theta.vercel.app/opportunities)**
+
+The repository includes `vercel.json` with the Angular output directory and SPA route rewrite. Import the repository into Vercel and use the standard `npm run build` command. No production environment variables are required for the current demo.
+
+JSON Server is used only during local development. A Vercel deployment loads the bundled `db.json` seed data instead, while newly created and cancelled registrations are saved in the visitor's browser through `localStorage`. This keeps the demo fully functional without trying to connect to `localhost:3000` from production. For shared, multi-user persistence, replace this browser-backed deployment adapter with a hosted database/API later.
 
 ## Screenshots
 
