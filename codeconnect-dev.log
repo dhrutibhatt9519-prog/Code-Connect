@@ -1,0 +1,49 @@
+
+> code-connect@0.0.0 dev
+> concurrently "npm:start" "npm:api"
+
+[api] 
+[api] > code-connect@0.0.0 api
+[api] > json-server --watch db.json --port 3000
+[api] 
+[start] 
+[start] > code-connect@0.0.0 start
+[start] > ng serve
+[start] 
+[api] --watch/-w can be omitted, JSON Server 1+ watches for file changes by default
+[api] node:events:486
+[api]       throw er; // Unhandled 'error' event
+[api]       ^
+[api] 
+[api] Error: listen EADDRINUSE: address already in use :::3000
+[api]     at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+[api]     at listenInCluster (node:net:2005:12)
+[api]     at Server.listen (node:net:2110:7)
+[api]     at App.listen (file:///E:/db/Humber/Angular/Code%20Connect/code-connect/node_modules/@tinyhttp/app/dist/app.js:323:58)
+[api]     at file:///E:/db/Humber/Angular/Code%20Connect/code-connect/node_modules/json-server/lib/bin.js:133:5
+[api] Emitted 'error' event on Server instance at:
+[api]     at emitErrorNT (node:net:1984:8)
+[api]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+[api]   code: 'EADDRINUSE',
+[api]   errno: -4091,
+[api]   syscall: 'listen',
+[api]   address: '::',
+[api]   port: 3000
+[api] }
+[api] 
+[api] Node.js v24.14.0
+[api] npm run api exited with code 1
+[start] E:\db\Humber\Angular\Code Connect\code-connect\node_modules\rxjs\dist\cjs\internal\util\reportUnhandledError.js:13
+[start]             throw err;
+[start]             ^
+[start] 
+[start] Error: Port 4200 is already in use. Use '--port' to specify a different port.
+[start]     at createInUseError (E:\db\Humber\Angular\Code Connect\code-connect\node_modules\@angular\build\src\utils\check-port.js:51:12)
+[start]     at Server.<anonymous> (E:\db\Humber\Angular\Code Connect\code-connect\node_modules\@angular\build\src\utils\check-port.js:68:24)
+[start]     at Object.onceWrapper (node:events:623:26)
+[start]     at Server.emit (node:events:508:28)
+[start]     at emitErrorNT (node:net:1984:8)
+[start]     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+[start] 
+[start] Node.js v24.14.0
+[start] npm run start exited with code 1

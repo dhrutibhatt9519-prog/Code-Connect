@@ -1,0 +1,33 @@
+@if (loading()) {
+  <app-loading-state message="Preparing your registration…" />
+} @else if (error() || !opportunity()) {
+  <div class="container section"><app-empty-state icon="!" title="Registration unavailable" message="This opportunity could not be found or registration is no longer available." /></div>
+} @else if (step() === 4) {
+  <div class="container"><app-registration-success [reference]="reference()" [total]="completedTotal()" /></div>
+} @else {
+  @let item = opportunity()!;
+  <section class="wizard-hero"><div class="container">
+    <a [routerLink]="['/opportunities', item.id]">← Back to opportunity</a><p class="eyebrow">Complete your registration</p><h1>{{ item.title }}</h1>
+    <div class="progress" aria-label="Registration progress">
+      @for (label of ['Package', 'Participants', 'Review']; track label; let i = $index) {
+        <div [class.active]="step() >= i + 1"><span>{{ step() > i + 1 ? '✓' : i + 1 }}</span><strong>{{ label }}</strong></div>
+        @if (i < 2) { <span class="connector" [class.active]="step() > i + 1"></span> }
+      }
+    </div>
+  </div></section>
+  <div class="container wizard-layout section">
+    <main class="panel">
+      @if (step() === 1) { <app-package-selection [packages]="item.packages" [selectedId]="selectedPackageId()" [quantity]="quantity()" (selectionChange)="updateSelection($event)" /> }
+      @else if (step() === 2) { <app-participant-details [participants]="participantForms" /> }
+      @else if (selectedPackage()) { <app-registration-review [opportunity]="item" [package]="selectedPackage()!" [quantity]="quantity()" [participants]="$any(participantForms.getRawValue())" /> }
+      @if (submitError()) { <p class="submit-error" role="alert">We couldn't complete your registration. Please try again.</p> }
+      <div class="actions">
+        @if (step() > 1) { <button class="btn btn-secondary" type="button" (click)="back()" [disabled]="submitting()">← Back</button> }
+        <span></span>
+        @if (step() < 3) { <button class="btn btn-primary" type="button" (click)="next()">Continue →</button> }
+        @else { <button class="btn btn-primary" type="button" (click)="submit()" [disabled]="submitting()">{{ submitting() ? 'Confirming…' : 'Confirm Registration' }}</button> }
+      </div>
+    </main>
+    <aside><img [src]="item.bannerImage" [alt]="item.title" /><div><span>{{ item.category }}</span><h2>{{ item.title }}</h2><p>{{ item.location }}</p><dl><div><dt>Package</dt><dd>{{ selectedPackage()?.name }}</dd></div><div><dt>Participants</dt><dd>{{ quantity() }}</dd></div><div><dt>Total</dt><dd>{{ total() === 0 ? 'Free' : ('$' + total().toFixed(2)) }}</dd></div></dl></div></aside>
+  </div>
+}

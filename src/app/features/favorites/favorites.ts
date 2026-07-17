@@ -1,0 +1,11 @@
+import { Component, inject, signal, computed } from '@angular/core';
+import { finalize } from 'rxjs';
+import { Opportunity } from '../../core/models/opportunity.model';
+import { FavoritesService } from '../../core/services/favorites.service';
+import { OpportunityService } from '../../core/services/opportunity.service';
+import { EmptyStateComponent } from '../../shared/components/empty-state/empty-state';
+import { LoadingStateComponent } from '../../shared/components/loading-state/loading-state';
+import { OpportunityCardComponent } from '../opportunities/opportunity-card/opportunity-card';
+
+@Component({ selector: 'app-favorites', imports: [OpportunityCardComponent, EmptyStateComponent, LoadingStateComponent], template: `<section class="container section"><p class="eyebrow">Your shortlist</p><h1>Saved opportunities</h1><p class="intro">Keep the most interesting events close while you decide what's next.</p>@if (loading()) { <app-loading-state /> } @else if (error()) { <app-empty-state title="Favorites unavailable" message="We couldn't load your saved opportunities." /> } @else if (!saved().length) { <app-empty-state icon="♡" title="Nothing saved yet" message="Tap the heart on any opportunity to build your personal shortlist." /> } @else { <div class="grid">@for (item of saved(); track item.id) { <app-opportunity-card [opportunity]="item" /> }</div> }</section>`, styles: [`h1 { margin: 0; font-size: clamp(2rem,5vw,3.4rem); letter-spacing: -.05em; } .intro { margin: .5rem 0 2rem; color: var(--text-muted); } .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; } @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}} @media(max-width:560px){.grid{grid-template-columns:1fr}}`] })
+export class FavoritesComponent { private readonly service=inject(OpportunityService); readonly favorites=inject(FavoritesService); readonly opportunities=signal<Opportunity[]>([]); readonly loading=signal(true); readonly error=signal(false); readonly saved=computed(()=>this.opportunities().filter(item=>this.favorites.isFavorite(item.id))); constructor(){this.service.getOpportunities().pipe(finalize(()=>this.loading.set(false))).subscribe({next:data=>this.opportunities.set(data),error:()=>this.error.set(true)});} }

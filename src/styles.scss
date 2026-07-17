@@ -1,1 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light; --background: #f7f8fc; --surface: #ffffff; --surface-alt: #f0f2f8; --text: #111827; --text-muted: #5d6679; --text-subtle: #8991a2;
+  --border: #dfe3ec; --primary: #4f46e5; --primary-hover: #4338ca; --primary-soft: #ebe9ff; --accent: #7c3aed; --danger: #d92d20;
+  --gradient: linear-gradient(135deg, #2563eb 0%, #6d28d9 100%); --radius-sm: .75rem; --radius-md: 1rem; --radius-lg: 1.25rem;
+  --shadow-sm: 0 8px 24px rgb(15 23 42 / .06); --shadow-lg: 0 22px 60px rgb(15 23 42 / .14);
+}
+:root[data-theme='dark'] {
+  color-scheme: dark; --background: #090d18; --surface: #111827; --surface-alt: #182133; --text: #f4f7fb; --text-muted: #a7b0c2; --text-subtle: #7d8799;
+  --border: #293448; --primary: #818cf8; --primary-hover: #a5b4fc; --primary-soft: #242656; --danger: #f97066; --shadow-sm: 0 10px 26px rgb(0 0 0 / .22); --shadow-lg: 0 24px 70px rgb(0 0 0 / .42);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--text); background: var(--background); font-family: Inter, ui-sans-serif, system-ui, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+button, input, select, textarea { font: inherit; }
+button, a { transition: color .18s ease, background-color .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--primary) 50%, transparent); outline-offset: 3px; }
+.container { width: min(100% - 2rem, 1180px); margin-inline: auto; }
+.section { padding-block: 4rem; }
+.eyebrow { margin: 0 0 .6rem; color: var(--primary); font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.btn { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; gap: .5rem; padding: .7rem 1.1rem; border: 1px solid transparent; border-radius: .75rem; font-weight: 700; text-decoration: none; cursor: pointer; }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+.btn-primary { color: white; background: var(--gradient); box-shadow: 0 8px 18px rgb(79 70 229 / .22); }
+.btn-primary:not(:disabled):hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgb(79 70 229 / .3); }
+.btn-secondary { color: var(--text); border-color: var(--border); background: var(--surface); }
+.btn-secondary:hover { border-color: var(--primary); }
+.btn-danger { color: white; background: var(--danger); }
+.field { display: grid; gap: .42rem; }
+.field label, .field-label { color: var(--text); font-size: .83rem; font-weight: 700; }
+.input, .select { width: 100%; min-height: 2.85rem; padding: .7rem .85rem; border: 1px solid var(--border); border-radius: .75rem; color: var(--text); background: var(--surface); }
+.input::placeholder { color: var(--text-subtle); }
+.input:focus, .select:focus { border-color: var(--primary); outline: 3px solid color-mix(in srgb, var(--primary) 15%, transparent); }
+.error-text { margin: .25rem 0 0; color: var(--danger); font-size: .78rem; }
+.skip-link { position: fixed; z-index: 1000; top: .5rem; left: .5rem; padding: .65rem 1rem; transform: translateY(-150%); border-radius: .5rem; color: white; background: var(--primary); }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 600px) { .section { padding-block: 2.75rem; } .container { width: min(100% - 1.25rem, 1180px); } }

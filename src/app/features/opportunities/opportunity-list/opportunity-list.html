@@ -1,0 +1,19 @@
+<section class="hero"><div class="container hero-content"><p class="eyebrow">Learn. Build. Belong.</p><h1>Find your next developer<br><span>breakthrough.</span></h1><p>Curated workshops, hackathons, conferences, and mentorship built to move your career forward.</p><div class="hero-stats"><span><strong>12+</strong> Curated events</span><span><strong>40+</strong> Expert mentors</span><span><strong>7</strong> Learning formats</span></div></div></section>
+<section class="container discovery">
+  <div class="toolbar">
+    <div class="search"><span aria-hidden="true">⌕</span><label class="sr-only" for="search">Search opportunities</label><input id="search" class="input" type="search" [formControl]="searchControl" placeholder="Search by title, organizer, or technology…" /></div>
+    <button class="btn btn-secondary filter-toggle" type="button" (click)="filtersOpen.set(!filtersOpen())">Filters <span aria-hidden="true">⚙</span></button>
+  </div>
+  <div class="layout">
+    <aside class="filters" [class.open]="filtersOpen()"><div class="filter-heading"><h2>Filters</h2><button type="button" (click)="clearFilters()">Clear all</button></div>
+      <div class="filter-group"><label for="category">Category</label><select id="category" class="select" [value]="category()" (change)="category.set($any($event.target).value)">@for (item of categories; track item) { <option [value]="item">{{ item === 'All' ? 'All categories' : item }}</option> }</select></div>
+      <div class="filter-group"><label for="level">Skill level</label><select id="level" class="select" [value]="level()" (change)="level.set($any($event.target).value)">@for (item of levels; track item) { <option [value]="item">{{ item === 'All' ? 'All levels' : item }}</option> }</select></div>
+      <div class="filter-group"><label for="format">Format</label><select id="format" class="select" [value]="format()" (change)="format.set($any($event.target).value)">@for (item of formats; track item) { <option [value]="item">{{ item === 'All' ? 'All formats' : item }}</option> }</select></div>
+      <div class="filter-group"><label for="date">Date</label><select id="date" class="select" [value]="dateFilter()" (change)="dateFilter.set($any($event.target).value)"><option>All</option><option>Upcoming</option><option>This Week</option><option>This Month</option></select></div>
+      <div class="filter-group"><label for="price">Price</label><select id="price" class="select" [value]="priceFilter()" (change)="priceFilter.set($any($event.target).value)"><option>All</option><option>Free</option><option>Under $50</option><option>$50+</option></select></div>
+    </aside>
+    <div class="results"><div class="results-header"><div><p class="eyebrow">Explore opportunities</p><h2>{{ filtered().length }} {{ filtered().length === 1 ? 'result' : 'results' }}</h2></div><div class="sort"><label for="sort">Sort by</label><select id="sort" class="select" [value]="sort()" (change)="sort.set($any($event.target).value)"><option value="date">Soonest date</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="title">Title A–Z</option></select></div></div>
+      @if (loading()) { <app-loading-state message="Finding great opportunities…" /> } @else if (error()) { <app-empty-state icon="!" title="We couldn't load opportunities" message="Check that JSON Server is running, then try again." actionLabel="Try again" (action)="load()" /> } @else if (filtered().length === 0) { <app-empty-state icon="⌕" title="No opportunities found" message="Try widening your search or clearing the active filters." actionLabel="Clear filters" (action)="clearFilters()" /> } @else { <div class="grid">@for (item of filtered(); track item.id) { <app-opportunity-card [opportunity]="item" /> }</div> }
+    </div>
+  </div>
+</section>

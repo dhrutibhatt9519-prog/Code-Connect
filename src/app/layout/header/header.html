@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" routerLink="/opportunities" (click)="closeMenu()" aria-label="CodeConnect home">
+      <span class="logo-mark" aria-hidden="true">&lt;/&gt;</span><span>Code<span>Connect</span></span>
+    </a>
+    <button class="menu-toggle" type="button" (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" aria-controls="primary-nav" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="primary-nav" class="nav" [class.open]="menuOpen()" aria-label="Primary navigation">
+      <a routerLink="/opportunities" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Opportunities</a>
+      <a routerLink="/registrations" routerLinkActive="active" (click)="closeMenu()">My Registrations</a>
+      <a routerLink="/favorites" routerLinkActive="active" (click)="closeMenu()">Favorites <span class="count">{{ favorites.count() }}</span></a>
+      <button class="theme-toggle" type="button" (click)="themeService.toggle()" [attr.aria-label]="'Switch to ' + (themeService.theme() === 'light' ? 'dark' : 'light') + ' theme'">
+        <span aria-hidden="true">{{ themeService.theme() === 'light' ? '☾' : '☀' }}</span>
+      </button>
+    </nav>
+  </div>
+</header>

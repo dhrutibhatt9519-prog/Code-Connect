@@ -1,0 +1,947 @@
+{
+  "opportunities": [
+    {
+      "id": "angular-performance-workshop",
+      "title": "Angular Performance Workshop",
+      "shortDescription": "Profile, diagnose, and ship faster Angular applications with modern rendering patterns.",
+      "description": "A practical deep dive into Angular performance for developers who want measurable improvements. Work through real profiling sessions, route-level optimization, signals, image loading, and bundle analysis with an experienced Angular architect.",
+      "category": "Workshop",
+      "startDate": "2026-08-08T13:00:00-04:00",
+      "endDate": "2026-08-08T17:30:00-04:00",
+      "format": "Hybrid",
+      "location": "Toronto, ON + Online",
+      "level": "Intermediate",
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "RxJS"
+      ],
+      "startingPrice": 39,
+      "organizer": "Frontend North",
+      "bannerImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Performance budgets and measurement",
+        "Signals and change detection lab",
+        "Lazy loading and bundle analysis",
+        "Core Web Vitals clinic"
+      ],
+      "prerequisites": [
+        "Working Angular knowledge",
+        "Laptop with Node.js 22+",
+        "A sample Angular project"
+      ],
+      "speakers": [
+        {
+          "name": "Maya Chen",
+          "role": "Principal Frontend Engineer",
+          "company": "Northstar Labs",
+          "bio": "Maya scales Angular platforms used by millions of customers.",
+          "avatar": "https://i.pravatar.cc/200?img=47"
+        }
+      ],
+      "packages": [
+        {
+          "id": "general",
+          "name": "General",
+          "description": "Full workshop access and digital workbook.",
+          "price": 39,
+          "available": 38,
+          "perks": [
+            "Live workshop",
+            "Digital workbook",
+            "30-day recording"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "description": "Workshop access plus a private performance review.",
+          "price": 99,
+          "available": 8,
+          "perks": [
+            "Everything in General",
+            "30-minute code review",
+            "Priority Q&A"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is the session recorded?",
+          "answer": "Yes. Registered participants receive access for 30 days."
+        },
+        {
+          "question": "Can I attend online?",
+          "answer": "Yes. The full workshop is streamed with interactive Q&A."
+        }
+      ]
+    },
+    {
+      "id": "react-accessibility-bootcamp",
+      "title": "React Accessibility Bootcamp",
+      "shortDescription": "Build inclusive React interfaces through audits, patterns, and hands-on testing.",
+      "description": "An intensive two-day bootcamp covering semantic components, keyboard flows, screen readers, focus management, and automated accessibility checks in React.",
+      "category": "Bootcamp",
+      "startDate": "2026-09-12T10:00:00-04:00",
+      "endDate": "2026-09-13T16:00:00-04:00",
+      "format": "Online",
+      "location": "Online",
+      "level": "Intermediate",
+      "technologies": [
+        "React",
+        "ARIA",
+        "Testing Library"
+      ],
+      "startingPrice": 79,
+      "organizer": "Inclusive Web Guild",
+      "bannerImage": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Accessibility foundations",
+        "Keyboard and focus patterns",
+        "Screen-reader testing",
+        "Accessible component capstone"
+      ],
+      "prerequisites": [
+        "Comfort with React",
+        "Node.js and a code editor"
+      ],
+      "speakers": [
+        {
+          "name": "Jordan Brooks",
+          "role": "Accessibility Lead",
+          "company": "Open Interface",
+          "bio": "Jordan helps product teams make accessibility part of everyday delivery.",
+          "avatar": "https://i.pravatar.cc/200?img=12"
+        }
+      ],
+      "packages": [
+        {
+          "id": "general",
+          "name": "General",
+          "description": "Two-day bootcamp and recordings.",
+          "price": 79,
+          "available": 45,
+          "perks": [
+            "Live sessions",
+            "Labs",
+            "Recordings"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "description": "Adds portfolio accessibility review.",
+          "price": 149,
+          "available": 10,
+          "perks": [
+            "General access",
+            "Portfolio audit",
+            "Certificate"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do I need a screen reader?",
+          "answer": "No. Setup guidance for free tools is included."
+        }
+      ]
+    },
+    {
+      "id": "typescript-for-beginners",
+      "title": "TypeScript for Beginners",
+      "shortDescription": "Move from JavaScript to confident, type-safe application development.",
+      "description": "A welcoming introduction to TypeScript fundamentals including inference, unions, interfaces, generics, narrowing, and practical project configuration.",
+      "category": "Workshop",
+      "startDate": "2026-07-29T18:00:00-04:00",
+      "endDate": "2026-07-29T20:30:00-04:00",
+      "format": "Online",
+      "location": "Online",
+      "level": "Beginner",
+      "technologies": [
+        "TypeScript",
+        "JavaScript",
+        "Node.js"
+      ],
+      "startingPrice": 0,
+      "organizer": "CodeStart Collective",
+      "bannerImage": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Why types matter",
+        "Objects, unions, and interfaces",
+        "Narrowing and generics",
+        "Build a typed mini-project"
+      ],
+      "prerequisites": [
+        "Basic JavaScript",
+        "Laptop and browser"
+      ],
+      "speakers": [
+        {
+          "name": "Sam Rivera",
+          "role": "Developer Educator",
+          "company": "CodeStart",
+          "bio": "Sam creates approachable pathways into modern web development.",
+          "avatar": "https://i.pravatar.cc/200?img=5"
+        }
+      ],
+      "packages": [
+        {
+          "id": "free",
+          "name": "Free",
+          "description": "Community access to the live session.",
+          "price": 0,
+          "available": 120,
+          "perks": [
+            "Live session",
+            "Starter repository",
+            "Community chat"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "description": "Adds feedback and extended resources.",
+          "price": 29,
+          "available": 25,
+          "perks": [
+            "Free access",
+            "Exercise review",
+            "Resource pack"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is this suitable for new developers?",
+          "answer": "Yes. Basic JavaScript familiarity is all you need."
+        }
+      ]
+    },
+    {
+      "id": "full-stack-hackathon",
+      "title": "Full-Stack Hackathon",
+      "shortDescription": "Form a team and build a useful product in one ambitious weekend.",
+      "description": "A 36-hour hybrid hackathon for creative developers. Choose a community challenge, collaborate with designers and mentors, and demo a working product to industry judges.",
+      "category": "Hackathon",
+      "startDate": "2026-10-03T09:00:00-04:00",
+      "endDate": "2026-10-04T18:00:00-04:00",
+      "format": "Hybrid",
+      "location": "MaRS Discovery District, Toronto + Online",
+      "level": "Intermediate",
+      "technologies": [
+        "Node.js",
+        "React",
+        "PostgreSQL",
+        "AI"
+      ],
+      "startingPrice": 20,
+      "organizer": "BuildTO",
+      "bannerImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Opening and challenge reveal",
+        "Team formation and build sprint",
+        "Mentor checkpoints",
+        "Demos and awards"
+      ],
+      "prerequisites": [
+        "One completed programming project",
+        "Laptop and development environment"
+      ],
+      "speakers": [
+        {
+          "name": "Aisha Patel",
+          "role": "VP Engineering",
+          "company": "Launchpad",
+          "bio": "Aisha builds high-trust product engineering organizations.",
+          "avatar": "https://i.pravatar.cc/200?img=32"
+        }
+      ],
+      "packages": [
+        {
+          "id": "general",
+          "name": "General",
+          "description": "Participant access, meals, and swag.",
+          "price": 20,
+          "available": 96,
+          "perks": [
+            "Venue access",
+            "Meals",
+            "Event swag"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Team Pack",
+          "description": "Four admissions with reserved team space.",
+          "price": 65,
+          "available": 20,
+          "perks": [
+            "Four tickets",
+            "Reserved table",
+            "Mentor priority"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can I join without a team?",
+          "answer": "Absolutely. Team matching happens during kickoff."
+        }
+      ]
+    },
+    {
+      "id": "open-source-contribution-sprint",
+      "title": "Open Source Contribution Sprint",
+      "shortDescription": "Make your first meaningful contribution with maintainers by your side.",
+      "description": "A guided open-source sprint featuring curated issues, maintainer office hours, Git workflow support, and a friendly community for contributors at every stage.",
+      "category": "Open Source",
+      "startDate": "2026-08-22T11:00:00-04:00",
+      "endDate": "2026-08-22T17:00:00-04:00",
+      "format": "Online",
+      "location": "Online",
+      "level": "Beginner",
+      "technologies": [
+        "Git",
+        "GitHub",
+        "Open Source"
+      ],
+      "startingPrice": 0,
+      "organizer": "Open Dev Canada",
+      "bannerImage": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Open source orientation",
+        "Issue selection",
+        "Contribution sprint",
+        "Maintainer showcase"
+      ],
+      "prerequisites": [
+        "GitHub account",
+        "Git installed"
+      ],
+      "speakers": [
+        {
+          "name": "Noah Williams",
+          "role": "Open Source Maintainer",
+          "company": "Civic Stack",
+          "bio": "Noah maintains developer tools and mentors first-time contributors.",
+          "avatar": "https://i.pravatar.cc/200?img=11"
+        }
+      ],
+      "packages": [
+        {
+          "id": "free",
+          "name": "Free",
+          "description": "Full community sprint access.",
+          "price": 0,
+          "available": 160,
+          "perks": [
+            "Mentor support",
+            "Curated issues",
+            "Community badge"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can this be my first contribution?",
+          "answer": "Yes. The event is designed to help first-time contributors."
+        }
+      ]
+    },
+    {
+      "id": "ai-api-integration-workshop",
+      "title": "AI API Integration Workshop",
+      "shortDescription": "Design reliable AI features with structured outputs, tools, and evaluation.",
+      "description": "Build a production-minded AI feature from API call to evaluated experience. Learn prompt structure, tool integration, streaming, safety, cost controls, and practical evaluation.",
+      "category": "Workshop",
+      "startDate": "2026-11-05T13:00:00-05:00",
+      "endDate": "2026-11-05T17:00:00-05:00",
+      "format": "Online",
+      "location": "Online",
+      "level": "Advanced",
+      "technologies": [
+        "AI",
+        "Python",
+        "APIs"
+      ],
+      "startingPrice": 49,
+      "organizer": "Applied AI Toronto",
+      "bannerImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "AI feature architecture",
+        "Structured output lab",
+        "Tool calling and streaming",
+        "Evaluation and observability"
+      ],
+      "prerequisites": [
+        "API development experience",
+        "Python or TypeScript familiarity"
+      ],
+      "speakers": [
+        {
+          "name": "Elena Park",
+          "role": "AI Platform Engineer",
+          "company": "VectorWorks",
+          "bio": "Elena develops reliable AI infrastructure and evaluation systems.",
+          "avatar": "https://i.pravatar.cc/200?img=44"
+        }
+      ],
+      "packages": [
+        {
+          "id": "general",
+          "name": "General",
+          "description": "Workshop and lab repository.",
+          "price": 49,
+          "available": 55,
+          "perks": [
+            "Live workshop",
+            "Code repository",
+            "Recording"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "description": "Adds architecture office hours.",
+          "price": 109,
+          "available": 12,
+          "perks": [
+            "General access",
+            "Small-group office hours",
+            "Evaluation templates"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Are API credits included?",
+          "answer": "A small sandbox credit is included for the exercises."
+        }
+      ]
+    },
+    {
+      "id": "toronto-frontend-meetup",
+      "title": "Toronto Frontend Meetup",
+      "shortDescription": "Lightning talks, practical demos, and thoughtful conversations with local developers.",
+      "description": "The monthly gathering for Toronto frontend developers. This edition explores design systems, CSS architecture, and the evolving browser platform.",
+      "category": "Open Source",
+      "startDate": "2026-08-13T18:30:00-04:00",
+      "endDate": "2026-08-13T21:00:00-04:00",
+      "format": "In Person",
+      "location": "OneEleven, 325 Front St W, Toronto",
+      "level": "Beginner",
+      "technologies": [
+        "CSS",
+        "JavaScript",
+        "Web Components"
+      ],
+      "startingPrice": 0,
+      "organizer": "Toronto Frontend",
+      "bannerImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Community welcome",
+        "Three lightning talks",
+        "Panel Q&A",
+        "Networking"
+      ],
+      "prerequisites": [
+        "Curiosity about frontend development"
+      ],
+      "speakers": [
+        {
+          "name": "Devon Lee",
+          "role": "Design Systems Engineer",
+          "company": "Canvas",
+          "bio": "Devon builds accessible component systems for product teams.",
+          "avatar": "https://i.pravatar.cc/200?img=15"
+        }
+      ],
+      "packages": [
+        {
+          "id": "free",
+          "name": "Free",
+          "description": "Community meetup admission.",
+          "price": 0,
+          "available": 72,
+          "perks": [
+            "Talks",
+            "Refreshments",
+            "Networking"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Is food provided?",
+          "answer": "Light snacks and non-alcoholic drinks are provided."
+        }
+      ]
+    },
+    {
+      "id": "github-portfolio-review",
+      "title": "GitHub Portfolio Review",
+      "shortDescription": "Get focused, actionable feedback on your developer portfolio and GitHub profile.",
+      "description": "A small-group mentorship session where hiring engineers review project presentation, README quality, commit history, and the story your portfolio tells.",
+      "category": "Mentorship",
+      "startDate": "2026-08-06T19:00:00-04:00",
+      "endDate": "2026-08-06T20:30:00-04:00",
+      "format": "Online",
+      "location": "Online",
+      "level": "Beginner",
+      "technologies": [
+        "GitHub",
+        "Career",
+        "Portfolio"
+      ],
+      "startingPrice": 15,
+      "organizer": "Dev Career Studio",
+      "bannerImage": "https://images.unsplash.com/photo-1573495627361-d9b87960b12d?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1573495627361-d9b87960b12d?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Portfolio storytelling",
+        "Live profile reviews",
+        "README clinic",
+        "Action planning"
+      ],
+      "prerequisites": [
+        "Public GitHub profile",
+        "At least one portfolio project"
+      ],
+      "speakers": [
+        {
+          "name": "Priya Shah",
+          "role": "Engineering Manager",
+          "company": "BrightPay",
+          "bio": "Priya has interviewed and mentored hundreds of early-career developers.",
+          "avatar": "https://i.pravatar.cc/200?img=49"
+        }
+      ],
+      "packages": [
+        {
+          "id": "general",
+          "name": "General",
+          "description": "Group session and checklist.",
+          "price": 15,
+          "available": 24,
+          "perks": [
+            "Group review",
+            "Portfolio checklist"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "1:1 Review",
+          "description": "Adds a private follow-up review.",
+          "price": 55,
+          "available": 5,
+          "perks": [
+            "Group session",
+            "25-minute private review",
+            "Written feedback"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Will everyone receive feedback?",
+          "answer": "Yes. General attendees receive group feedback; premium attendees also receive a private review."
+        }
+      ]
+    },
+    {
+      "id": "technical-interview-practice",
+      "title": "Technical Interview Practice",
+      "shortDescription": "Practice coding interviews in a supportive, structured peer environment.",
+      "description": "Sharpen problem-solving communication with realistic mock interviews, calibrated exercises, observer feedback, and strategies for managing uncertainty.",
+      "category": "Career Event",
+      "startDate": "2026-09-24T18:00:00-04:00",
+      "endDate": "2026-09-24T21:00:00-04:00",
+      "format": "Hybrid",
+      "location": "Waterloo, ON + Online",
+      "level": "Intermediate",
+      "technologies": [
+        "Algorithms",
+        "JavaScript",
+        "Career"
+      ],
+      "startingPrice": 25,
+      "organizer": "Interview Loop",
+      "bannerImage": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Interview framework",
+        "Paired mock rounds",
+        "Observer feedback",
+        "Hiring manager Q&A"
+      ],
+      "prerequisites": [
+        "Comfort with one programming language",
+        "Basic data structures"
+      ],
+      "speakers": [
+        {
+          "name": "Marcus Green",
+          "role": "Staff Software Engineer",
+          "company": "Maple Systems",
+          "bio": "Marcus trains interviewers and helps candidates communicate their thinking.",
+          "avatar": "https://i.pravatar.cc/200?img=3"
+        }
+      ],
+      "packages": [
+        {
+          "id": "general",
+          "name": "General",
+          "description": "One practice round and feedback.",
+          "price": 25,
+          "available": 36,
+          "perks": [
+            "Mock interview",
+            "Feedback rubric",
+            "Question bank"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "description": "Two rounds plus coach notes.",
+          "price": 65,
+          "available": 10,
+          "perks": [
+            "Two mock rounds",
+            "Coach feedback",
+            "Follow-up plan"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which languages are supported?",
+          "answer": "Use JavaScript, TypeScript, Python, Java, or C#."
+        }
+      ]
+    },
+    {
+      "id": "ux-for-developers",
+      "title": "UX for Developers",
+      "shortDescription": "Make better product decisions using practical UX principles and lightweight research.",
+      "description": "Learn the UX concepts developers use every day: hierarchy, affordance, cognitive load, research questions, usability testing, and productive designer collaboration.",
+      "category": "Workshop",
+      "startDate": "2026-10-17T10:00:00-04:00",
+      "endDate": "2026-10-17T15:00:00-04:00",
+      "format": "In Person",
+      "location": "George Brown Waterfront Campus, Toronto",
+      "level": "Beginner",
+      "technologies": [
+        "UX",
+        "Figma",
+        "Accessibility"
+      ],
+      "startingPrice": 35,
+      "organizer": "Product Craft Toronto",
+      "bannerImage": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "UX principles for engineers",
+        "Interface critique",
+        "Rapid usability testing",
+        "Designer-developer handoff"
+      ],
+      "prerequisites": [
+        "No design experience required",
+        "Bring a laptop"
+      ],
+      "speakers": [
+        {
+          "name": "Taylor Kim",
+          "role": "Senior Product Designer",
+          "company": "Fieldwork",
+          "bio": "Taylor helps cross-functional teams turn complex workflows into clear products.",
+          "avatar": "https://i.pravatar.cc/200?img=25"
+        }
+      ],
+      "packages": [
+        {
+          "id": "general",
+          "name": "General",
+          "description": "Workshop, lunch, and workbook.",
+          "price": 35,
+          "available": 31,
+          "perks": [
+            "Workshop",
+            "Lunch",
+            "Printed workbook"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Do I need Figma experience?",
+          "answer": "No. Any required Figma basics are demonstrated during the workshop."
+        }
+      ]
+    },
+    {
+      "id": "cloud-fundamentals-conference",
+      "title": "Cloud Fundamentals Conference",
+      "shortDescription": "A practical conference for developers building their first cloud-native systems.",
+      "description": "A one-day conference demystifying cloud architecture, containers, serverless systems, security, observability, and cost through approachable talks and demos.",
+      "category": "Conference",
+      "startDate": "2026-11-21T09:00:00-05:00",
+      "endDate": "2026-11-21T17:00:00-05:00",
+      "format": "Hybrid",
+      "location": "Metro Toronto Convention Centre + Online",
+      "level": "Beginner",
+      "technologies": [
+        "AWS",
+        "Azure",
+        "Docker",
+        "Cloud"
+      ],
+      "startingPrice": 50,
+      "organizer": "Cloud Native Ontario",
+      "bannerImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Cloud architecture keynote",
+        "Containers and serverless tracks",
+        "Security lab",
+        "Architecture panel"
+      ],
+      "prerequisites": [
+        "Basic web development knowledge"
+      ],
+      "speakers": [
+        {
+          "name": "Owen Clarke",
+          "role": "Cloud Solutions Architect",
+          "company": "Nimble Cloud",
+          "bio": "Owen helps teams make pragmatic, secure cloud architecture decisions.",
+          "avatar": "https://i.pravatar.cc/200?img=14"
+        }
+      ],
+      "packages": [
+        {
+          "id": "general",
+          "name": "General",
+          "description": "All talks and expo access.",
+          "price": 50,
+          "available": 240,
+          "perks": [
+            "Conference access",
+            "Expo",
+            "Session recordings"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Premium",
+          "description": "Adds labs and speaker reception.",
+          "price": 129,
+          "available": 40,
+          "perks": [
+            "General access",
+            "Hands-on labs",
+            "Speaker reception"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can I switch between online and in-person?",
+          "answer": "Yes, up to seven days before the conference."
+        }
+      ]
+    },
+    {
+      "id": "women-in-tech-career-panel",
+      "title": "Women in Tech Career Panel",
+      "shortDescription": "Honest career conversations with women leading across the technology industry.",
+      "description": "An evening of candid discussion about career pivots, technical leadership, sponsorship, negotiation, and building inclusive teams, followed by facilitated networking.",
+      "category": "Career Event",
+      "startDate": "2026-12-03T18:00:00-05:00",
+      "endDate": "2026-12-03T21:00:00-05:00",
+      "format": "In Person",
+      "location": "The Globe and Mail Centre, Toronto",
+      "level": "Beginner",
+      "technologies": [
+        "Career",
+        "Leadership",
+        "Networking"
+      ],
+      "startingPrice": 0,
+      "organizer": "TechForward Canada",
+      "bannerImage": "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=900&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1800&q=85",
+      "agenda": [
+        "Leadership panel",
+        "Audience Q&A",
+        "Mentor circles",
+        "Networking reception"
+      ],
+      "prerequisites": [
+        "Everyone committed to an inclusive tech community is welcome"
+      ],
+      "speakers": [
+        {
+          "name": "Nadia Thompson",
+          "role": "CTO",
+          "company": "Relay Health",
+          "bio": "Nadia leads global engineering teams and champions equitable career pathways.",
+          "avatar": "https://i.pravatar.cc/200?img=48"
+        },
+        {
+          "name": "Grace Liu",
+          "role": "Founder",
+          "company": "Thread Labs",
+          "bio": "Grace is a founder and longtime mentor to emerging technical leaders.",
+          "avatar": "https://i.pravatar.cc/200?img=45"
+        }
+      ],
+      "packages": [
+        {
+          "id": "free",
+          "name": "Free",
+          "description": "Panel and networking access.",
+          "price": 0,
+          "available": 110,
+          "perks": [
+            "Panel",
+            "Mentor circles",
+            "Reception"
+          ]
+        },
+        {
+          "id": "premium",
+          "name": "Supporter",
+          "description": "Includes reserved seating and supports student travel.",
+          "price": 45,
+          "available": 30,
+          "perks": [
+            "Reserved seating",
+            "Speaker reception",
+            "Community supporter badge"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Who can attend?",
+          "answer": "The event welcomes people of all identities who support women in technology."
+        }
+      ]
+    }
+  ],
+  "registrations": [
+    {
+      "id": "reg-1001",
+      "userId": "user1",
+      "opportunityId": "cloud-fundamentals-conference",
+      "opportunityTitle": "Cloud Fundamentals Conference",
+      "opportunityDate": "2026-11-21T09:00:00-05:00",
+      "selectedPackage": {
+        "packageId": "general",
+        "packageName": "General",
+        "unitPrice": 50,
+        "quantity": 1
+      },
+      "participants": [
+        {
+          "fullName": "Alex Morgan",
+          "email": "alex@example.com",
+          "phone": "416-555-0198",
+          "experienceLevel": "Beginner",
+          "profileUrl": "https://github.com/alex"
+        }
+      ],
+      "total": 50,
+      "referenceNumber": "CC-2026-814302",
+      "status": "Upcoming",
+      "createdAt": "2026-07-10T14:20:00Z"
+    },
+    {
+      "id": "reg-1002",
+      "userId": "user1",
+      "opportunityId": "typescript-for-beginners",
+      "opportunityTitle": "TypeScript for Beginners",
+      "opportunityDate": "2026-03-12T18:00:00-05:00",
+      "selectedPackage": {
+        "packageId": "free",
+        "packageName": "Free",
+        "unitPrice": 0,
+        "quantity": 1
+      },
+      "participants": [
+        {
+          "fullName": "Alex Morgan",
+          "email": "alex@example.com",
+          "phone": "416-555-0198",
+          "experienceLevel": "Beginner"
+        }
+      ],
+      "total": 0,
+      "referenceNumber": "CC-2026-207145",
+      "status": "Completed",
+      "createdAt": "2026-02-20T15:00:00Z"
+    },
+    {
+      "id": "reg-1003",
+      "userId": "user1",
+      "opportunityId": "github-portfolio-review",
+      "opportunityTitle": "GitHub Portfolio Review",
+      "opportunityDate": "2026-06-04T19:00:00-04:00",
+      "selectedPackage": {
+        "packageId": "general",
+        "packageName": "General",
+        "unitPrice": 15,
+        "quantity": 1
+      },
+      "participants": [
+        {
+          "fullName": "Alex Morgan",
+          "email": "alex@example.com",
+          "phone": "416-555-0198",
+          "experienceLevel": "Beginner"
+        }
+      ],
+      "total": 15,
+      "referenceNumber": "CC-2026-661904",
+      "status": "Cancelled",
+      "createdAt": "2026-05-02T15:00:00Z"
+    },
+    {
+      "userId": "user1",
+      "opportunityId": "typescript-for-beginners",
+      "opportunityTitle": "TypeScript for Beginners",
+      "opportunityDate": "2026-07-29T18:00:00-04:00",
+      "selectedPackage": {
+        "packageId": "premium",
+        "packageName": "Premium",
+        "unitPrice": 29,
+        "quantity": 1
+      },
+      "participants": [
+        {
+          "fullName": "test",
+          "email": "test@test.com",
+          "phone": "123456789",
+          "experienceLevel": "Beginner",
+          "profileUrl": ""
+        }
+      ],
+      "total": 29,
+      "referenceNumber": "CC-2026-899877",
+      "status": "Upcoming",
+      "createdAt": "2026-07-17T22:33:49.871Z",
+      "id": "pAOxSnZcjXE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

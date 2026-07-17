@@ -1,59 +1,111 @@
 # CodeConnect
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.19.
+CodeConnect is a developer-focused learning and networking platform for discovering workshops, hackathons, conferences, mentorship sessions, career events, bootcamps, and open-source meetups. It pairs a polished standalone Angular frontend with a lightweight JSON Server API.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Search, filter, and sort 12 realistic developer opportunities
+- Responsive event cards with categories, skill levels, technology badges, format, pricing, and favorites
+- Detailed opportunity pages with agenda, prerequisites, speakers, packages, availability, and FAQ
+- Persistent favorites and light/dark theme preferences using `localStorage`
+- Three-step registration wizard with package capacity, ticket quantity, participant `FormArray`, live totals, review, and confirmation
+- JSON Server registration creation with unique `CC-2026-XXXXXX` references
+- My Registrations dashboard with status filters and confirmation-based PATCH cancellation
+- Loading, empty, error, invalid-route, submission, success, and cancellation states
+- Responsive header/mobile navigation, accessible controls, keyboard focus states, and wildcard 404 page
 
-```bash
-ng serve
-```
+## Technology stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 21 standalone components (no NgModules)
+- TypeScript 5.9, SCSS, Angular Router
+- Reactive Forms, HttpClient, RxJS, Angular signals
+- JSON Server 1.x
+- Vitest through Angular's unit-test builder
 
-## Code scaffolding
+## Installation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Requirements: Node.js 22 or newer and npm.
 
 ```bash
-ng build
+git clone <repository-url>
+cd code-connect
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Running locally
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Run the frontend and API together:
 
 ```bash
-ng test
+npm run dev
 ```
 
-## Running end-to-end tests
+Then open [http://localhost:4200](http://localhost:4200). The API runs at [http://localhost:3000](http://localhost:3000).
 
-For end-to-end (e2e) testing, run:
+Alternatively, use two terminals:
 
 ```bash
-ng e2e
+npm run api
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Other commands:
 
-## Additional Resources
+```bash
+npm run build      # production build
+npm run test:ci    # one-pass unit test run
+npm test           # tests in watch mode
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The generated Angular workspace does not include an ESLint builder, so there is no lint command. Strict Angular compilation and the test suite are the available automated checks.
+
+## Folder structure
+
+```text
+src/app/
+├── core/
+│   ├── constants/          # API and sample-user constants
+│   ├── models/             # Opportunity and registration contracts
+│   └── services/           # HTTP, favorites, and theme services
+├── features/
+│   ├── opportunities/      # Listing, cards, and details
+│   ├── registration/       # Wizard and its four focused steps/states
+│   ├── registrations/      # My Registrations dashboard
+│   ├── favorites/          # Saved opportunity view
+│   └── not-found/          # Wildcard route
+├── layout/                 # Header and footer
+├── shared/components/      # Loading, empty, and confirmation UI
+├── app.config.ts
+└── app.routes.ts
+```
+
+## API endpoints
+
+The sample data lives in `db.json`.
+
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| GET | `/opportunities` | List all opportunities |
+| GET | `/opportunities/:id` | Fetch one opportunity |
+| GET | `/registrations?userId=user1` | Fetch the sample user's registrations |
+| POST | `/registrations` | Create a registration |
+| PATCH | `/registrations/:id` | Update registration status |
+
+## Screenshots
+
+> Add screenshots here after deployment.
+
+- Opportunities desktop view — `docs/screenshots/opportunities-desktop.png`
+- Opportunity details — `docs/screenshots/opportunity-details.png`
+- Registration wizard — `docs/screenshots/registration-wizard.png`
+- My Registrations mobile view — `docs/screenshots/registrations-mobile.png`
+- Dark theme — `docs/screenshots/dark-theme.png`
+
+## Future improvements
+
+- Server-side filtering and pagination for a larger catalog
+- Calendar exports and registration reminder emails
+- Waitlists when package capacity reaches zero
+- Organizer tools and opportunity submission workflows
+- End-to-end browser tests and automated accessibility audits
+- Real user accounts when the product moves beyond the JSON Server prototype

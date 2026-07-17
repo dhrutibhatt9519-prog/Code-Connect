@@ -1,0 +1,19 @@
+.site-header { position: sticky; top: 0; z-index: 50; height: 4.75rem; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--background) 90%, transparent); backdrop-filter: blur(16px); }
+.header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: .65rem; color: var(--text); font-size: 1.2rem; font-weight: 800; letter-spacing: -.04em; text-decoration: none; }
+.logo > span:last-child span { color: var(--primary); }
+.logo-mark { display: grid; place-items: center; width: 2.35rem; height: 2.35rem; border-radius: .7rem; color: white; background: var(--gradient); font-size: .78rem; box-shadow: 0 6px 18px rgb(91 92 246 / .26); }
+.nav { display: flex; align-items: center; gap: .35rem; }
+.nav a { padding: .65rem .85rem; border-radius: .7rem; color: var(--text-muted); text-decoration: none; font-size: .9rem; font-weight: 650; }
+.nav a:hover, .nav a.active { color: var(--text); background: var(--surface-alt); }
+.nav a.active { color: var(--primary); }
+.count { display: inline-grid; place-items: center; min-width: 1.25rem; height: 1.25rem; padding: 0 .3rem; margin-left: .2rem; border-radius: 2rem; background: var(--primary-soft); font-size: .7rem; }
+.theme-toggle, .menu-toggle { border: 1px solid var(--border); color: var(--text); background: var(--surface); cursor: pointer; }
+.theme-toggle { width: 2.55rem; height: 2.55rem; border-radius: .75rem; font-size: 1.15rem; }
+.menu-toggle { display: none; width: 2.7rem; height: 2.7rem; padding: .65rem; border-radius: .75rem; }
+.menu-toggle span { display: block; height: 2px; margin: 4px 0; border-radius: 2px; background: currentColor; }
+@media (max-width: 760px) {
+  .menu-toggle { display: block; }
+  .nav { display: none; position: absolute; top: calc(100% + .5rem); left: 1rem; right: 1rem; padding: .75rem; align-items: stretch; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); box-shadow: var(--shadow-lg); }
+  .nav.open { display: flex; } .nav a { padding: .85rem; } .theme-toggle { width: 100%; }
+}

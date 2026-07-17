@@ -1,0 +1,17 @@
+<article class="card" (click)="openDetails($event)">
+  <a class="image-wrap" [routerLink]="['/opportunities', opportunity().id]" [attr.aria-label]="'View ' + opportunity().title">
+    <img [src]="opportunity().bannerImage" [alt]="opportunity().title + ' event banner'" loading="lazy" />
+    <span class="category">{{ opportunity().category }}</span>
+    <button class="favorite" type="button" (click)="toggleFavorite($event)" [class.saved]="favorites.isFavorite(opportunity().id)" [attr.aria-label]="(favorites.isFavorite(opportunity().id) ? 'Remove ' : 'Save ') + opportunity().title">
+      <span aria-hidden="true">{{ favorites.isFavorite(opportunity().id) ? '♥' : '♡' }}</span>
+    </button>
+  </a>
+  <div class="content">
+    <div class="meta"><span>{{ opportunity().startDate | date:'MMM d, y · h:mm a' }}</span><span>{{ opportunity().format }}</span></div>
+    <h2><a [routerLink]="['/opportunities', opportunity().id]">{{ opportunity().title }}</a></h2>
+    <p class="description">{{ opportunity().shortDescription }}</p>
+    <div class="details"><span aria-hidden="true">⌖</span><span>{{ opportunity().location }}</span><span class="level">{{ opportunity().level }}</span></div>
+    <div class="tags">@for (technology of opportunity().technologies.slice(0, 3); track technology) { <span>{{ technology }}</span> }</div>
+    <div class="footer"><span>By <strong>{{ opportunity().organizer }}</strong></span><span class="price">{{ opportunity().startingPrice === 0 ? 'Free' : 'From ' + (opportunity().startingPrice | currency) }}</span></div>
+  </div>
+</article>
